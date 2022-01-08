@@ -1,3 +1,4 @@
+// setting variable for our 'generate' button
 var generateBtn = document.querySelector("#generate");
 // create array of letters
 let lcLetters = [
@@ -56,6 +57,7 @@ let ucLetters = [
   "Y",
   "Z",
 ];
+//set arrays for numbers and symbols
 let numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
 let possiblePassword = [];
@@ -67,7 +69,9 @@ function generatePassword() {
   let pwLength = prompt(
     "How long would you like your password? Choose 8-128 Chars."
   );
+  // create empty array the final password will get pushed too
   let password = [];
+  // setting parameters of how big the password should be
   if (pwLength < 8 || pwLength > 128) {
     alert("Your password must be between 8 and 128 characters.");
     return;
